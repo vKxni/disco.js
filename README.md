@@ -104,7 +104,7 @@ Cool.
 The next step is creating a code generator and a command to redeem them.
 Let's start with generating a premium code for our users.
 Go ahead and create a file called `generate.js` within your commands folder.
-The path would look something like this: `src/commands/subfolder/generate.js
+The path would look something like this: `src/commands/subfolder/generate.js`
 
 ```js
 // Import the modules we have installed before.
@@ -439,7 +439,7 @@ module.exports = {
     
     // Check if the User is premium and send him the "secret" command => only available for premium users.
     if (user && user.isPremium) {
-       message.author.send(stats))
+       message.author.send({ embeds: [embed] })
      
     // if the user is not a premium user, return an error.
     } else {
