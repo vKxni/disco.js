@@ -125,7 +125,7 @@ module.exports = {
 
   run: async (client, message, args, user, guild) => {
   
-  // As defined in the Schema, leave codes as a empty array variable
+  // As defined in the Schema, leave codes as an empty array variable
     let codes = [];
 
     // Display available plans of the code
