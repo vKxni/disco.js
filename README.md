@@ -146,7 +146,7 @@ module.exports = {
     if (plan === 'daily') time = Date.now() + 86400000;
     if (plan === 'weekly') time = Date.now() + 86400000 * 7;
     if (plan === 'monthly') time = Date.now() + 86400000 * 30;
-    if(plan === 'yearly') time = Date.now() + 86400000 * 365;
+    if (plan === 'yearly') time = Date.now() + 86400000 * 365;
 
     // If the input is for ex. 10, generate 10 Codes. Default => 1 Code / Command.
     let amount = args[1];
