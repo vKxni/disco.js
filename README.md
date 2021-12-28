@@ -452,7 +452,7 @@ module.exports = {
   },
 };
 ```
-Congrats. You now have a fully premium system integrated and fully working.
+Congrats. You now have a fully working premium system integrated.
 If you want a live example, check out [Cody](https://github.com/vKxni/Cody).
 I have integrated it there and also used it for the examples here.
 
