@@ -355,7 +355,7 @@ client.on("ready", async () => {
   
   // require the premium handler
   require("../handlers/premium")(client);
-}
+})
 ```
 Awesome. We are one step away!
 You might have seen a handler called `premium` in the last code snippet, let's work that out.
