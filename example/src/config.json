@@ -1,0 +1,5 @@
+{
+    "token": "Nzc5NDM2MzQyNDU4MzE4ODg5.X7ggqQ.Q8Q4mT_OiGJBIqQ-YkoqkeTfkCU",
+    "prefix": "!",
+    "mongo_database_link":"mongodb://localhost:27017/premium"
+  }

@@ -1,0 +1,20 @@
+{
+    "name": "rcnlx-handler",
+    "version": "1.0.0",
+    "description": "",
+    "main": "src/index.js",
+    "scripts": {
+        "start": "node ."
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "ascii-table": "0.0.9",
+        "discord.js": "^13.5.0",
+        "moment": "^2.29.1",
+        "mongoose": "^6.1.4",
+        "node-cron": "^3.0.0",
+        "voucher-code-generator": "^1.1.1"
+    }
+}

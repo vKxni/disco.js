@@ -1,0 +1,5 @@
+{
+    "token": "",
+    "prefix": "!",
+    "mongo_database_link": "mongodb string"
+  }
