@@ -75,7 +75,8 @@ The path would look like this: `src/schemas/User.js`
 // Import mongoose from the NPM Package we've installed before
 const mongoose = require('mongoose')
 
-// Define the user within the Schema
+// The heart of the User, here is everything saved that the User does.
+// Such as Levels, Courses, Premium, Enrolled, XP, Leaderboard.
 const user = mongoose.Schema({
   Id: {
     type: mongoose.SchemaTypes.String,
@@ -96,6 +97,16 @@ const user = mongoose.Schema({
       type: mongoose.SchemaTypes.Number,
       default: null
     },
+
+    expiresAt: {
+      type: mongoose.SchemaTypes.Number,
+      default: null
+    },
+
+    plan: {
+      type: mongoose.SchemaTypes.String,
+      default: null
+    }
   }
 })
 module.exports = mongoose.model('user', user)
