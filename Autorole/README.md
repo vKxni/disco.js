@@ -219,7 +219,7 @@ Start the Bot, run `/deployCommands` (the way you deploy commands and events).
 Now let a User join your Server.
 
 <p align="center">
-  <a href="https://discord.gg/3eNaWPhWZE" target="blank"><img src="https://media.discordapp.net/attachments/924636816865390604/926458280941858866/unknown.png" width="800" height="800" alt="Generate Code" /></a>
+  <a href="https://discord.gg/3eNaWPhWZE" target="blank"><img src="https://media.discordapp.net/attachments/924636816865390604/926458280941858866/unknown.png" width="500" height="200" alt="Generate Code" /></a>
 </p>
 
 Yay, it sent an message. But did the User received his role?
