@@ -30,7 +30,6 @@ Understanding Pathing
 Lets get started by installing some dependencies, open your favourite terminal.
 Run the following Commands in your Terminal.
 ```shell
-npm install moment
 npm install discord.js@latest
 npm install mongoose
 ```
