@@ -8,7 +8,7 @@
   
 ## Get Started
 ```
-cd Template
+cd Autorole
 npm install
 npm start
 ```
