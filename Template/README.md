@@ -17,7 +17,7 @@ Fill in your tokens and mongodb cluster connection string.
 
 ```
 Run the following Commands in any Channel:
-/ping - ping command as a base Command
+`/ping` - ping command as a base Command
 ```
 
   
