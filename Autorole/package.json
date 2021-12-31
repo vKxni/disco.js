@@ -1,5 +1,5 @@
 {
-  "name": "rebrand-Konibot",
+  "name": "autorole",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Konrad570/rebrand-Konibot.git"
+    "url": "git+"
   },
-  "author": "Koni & Kenshin13",
+  "author": "vKxni",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Konrad570/rebrand-Konibot/issues"
+    "url": "https://github.com/vKxni/disco.js/tree/main/Autorole"
   },
-  "homepage": "https://github.com/Konrad570/rebrand-Konibot#readme",
+  "homepage": "https://github.com/vKxni/disco.js/tree/main/Autorole",
   "dependencies": {
     "@discordjs/rest": "^0.1.0-canary.0",
     "ascii-table": "^0.0.9",
