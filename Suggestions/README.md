@@ -33,7 +33,27 @@ npm install discord.js@latest
 npm install mongoose
 ```
 Close your terminal, we won't need it while coding.
-The next steps are very easy. Create a folder called
+The next steps are very easy. 
+For this tutorial, we will modify our interactionCreate event a bit.
+
+```js
+const args = [];
+
+    for (let option of interaction.options.data) {
+      if (option.type === "SUB_COMMAND") {
+        if (option.name) args.push(option.name);
+        option.options?.forEach((x) => {
+          if (x.value) args.push(x.value);
+        });
+      } else if (option.value) args.push(option.value);
+    }
+```
+This allows us to have options on our commands.
+Full example [here](https://github.com/vKxni/disco.js/blob/main/Suggestions/src/events/interactionCreate.js)
+
+Now let's start coding our suggestion system.
+
+> Create a folder called
 `schemas`, the path would look like this: `src/models`.
 In there, create a file called `suggestions.js`.
 
