@@ -35,3 +35,4 @@ Sometimes, there is a src folder with the source code in action.
 - Premium System
 - Welcome/Autorole
 - Logging
+- Suggestions
