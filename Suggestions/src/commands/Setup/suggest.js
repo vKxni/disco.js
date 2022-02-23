@@ -33,11 +33,13 @@ module.exports.run = async (interaction) =>
     try
     {
     
+        // Chef is the guild is within the database
         const guildQuery = await Guild.findOne({ id: interaction.guild.id })
         if(!guildQuery) return interaction.reply({ content: `This guild has **no** suggestion system setup.`, ephemeral: true })
         
+        // Some variables
         const suggestion = interaction.options.getString("suggestion")
-        const pin = generateID();
+        const pin = generateID(); // generate a random ID
         const user = interaction.user;
 
         if(suggestion.length >= 150) return interaction.reply({ content: `Description must be less than **150** characters.`, ephemeral: true })
@@ -50,11 +52,15 @@ module.exports.run = async (interaction) =>
         .setThumbnail(interaction.user.displayAvatarURL({ dynamic: true }))
         .setColor("#36393F")
 
+        // If guild has some data, save the suggestion including message + id in the database
+        // Send the message into the channel and react with upvote/downvote emojis
+        // Feel free to change them if you want.
         if(guildQuery) {
             const guild = interaction.client.guilds.cache.get(interaction.guild.id);
             const suggestionchannel = guild.channels.cache.get(guildQuery.channel);
             const message = await suggestionchannel.send({ embeds: [embed] }); 
 
+            // As mentioned above, save the suggestion under the users ID
             const userSuggestion = new User({
                 userID: interaction.user.id,
                 suggestion: suggestion,
