@@ -1,0 +1,42 @@
+{
+  "name": "koni-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "node ./src/deployCommands.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vKxni"
+  },
+  "author": "Koni & Kenshin13",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vKxni"
+  },
+  "homepage": "https://github.com/vKxni",
+  "dependencies": {
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "ascii-table": "^0.0.9",
+    "chalk": "^4.1.2",
+    "colors": "^1.4.0",
+    "cross-fetch": "^3.1.4",
+    "discord-api-types": "^0.23.1",
+    "discord.js": "^13.5.0",
+    "dotenv": "^10.0.0",
+    "fs": "^0.0.1-security",
+    "konimath": "^1.1.2",
+    "moment": "^2.29.1",
+    "mongoose": "^6.0.5",
+    "ms": "^2.1.3",
+    "node-cron": "^3.0.0",
+    "node-fetch": "^3.1.0",
+    "nodemon": "^2.0.12",
+    "noobject": "^1.2.7",
+    "path": "^0.12.7",
+    "voucher-code-generator": "^1.1.1"
+  }
+}
