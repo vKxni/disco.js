@@ -17,9 +17,11 @@ module.exports.cooldown = {
 
 module.exports.run = async (interaction) => {
   
-    const channel = interaction.options.getChannel("channel") || interaction.channel;
+    // Check if the guild has some data in the database.
     const guildQuery = await Guild.findOne({ id: interaction.guild.id });
+    const channel = interaction.options.getChannel("channel") || interaction.channel;
 
+    // If not data, create new data.
     if (!guildQuery) {
       const newLogs = new Guild({
         id: interaction.guild.id,
@@ -30,6 +32,9 @@ module.exports.run = async (interaction) => {
         content: `Successfully set the suggestion channel to ${channel}`,
         ephemeral: true,
       });
+      
+    // We want the user to change the channel any time
+    // This is a huge quality of live ad-on
     } else {
       if (channel.type != "GUILD_TEXT") {
         interaction.reply({
@@ -38,7 +43,8 @@ module.exports.run = async (interaction) => {
         });
         return;
       }
-
+  
+      // Update the guilds channel to the new mentioned channel
       await Guild.findOneAndUpdate({
         id: interaction.guild.id,
         channel: channel.id,
