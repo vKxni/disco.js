@@ -56,6 +56,7 @@ Now let's start coding our suggestion system.
 > Create a folder called
 `schemas`, the path would look like this: `src/models`.
 In there, create a file called `suggestions.js`.
+The path would look like this: `src/models/suggestions.js`
 
 We now want Mongoose to store the suggestion setup we generate within the guild.
 ```js
