@@ -2,7 +2,6 @@
 
 const { Client } = require("discord.js");
 const { red, green, blue, yellow, cyan } = require('chalk');
-const User = require("../models/Premium/User")
 
 module.exports.data =
 {
@@ -16,13 +15,6 @@ module.exports.data =
  */
 module.exports.run = async (client) =>
 {
-
-    const users = await User.find();
-    for (let user of users) {
-      client.userSettings.set(user.Id, user);
-    }
-
-    require("../util/premium")(client);
 
     // Set the Bot status
     client.user.setPresence({ activities: [{ name: `cody-bot.xyz` }], status: "dnd" });
