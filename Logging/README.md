@@ -110,7 +110,7 @@ module.exports.run = async (interaction, utils) =>
         if (!isSetup) {
           if (channel.type != "GUILD_TEXT") {
             interaction.reply({
-              content: `${emojis.error} | This is not a valid channel!`,
+              content: `:x: | This is not a valid text channel!`,
               ephemeral: true,
             });
             return;
@@ -120,6 +120,7 @@ module.exports.run = async (interaction, utils) =>
           let webhookid;
           let webhooktoken;
     
+          // You can change the name and the avatar link
           let newwebhook = await channel
             .createWebhook("Bot-Logging", {
               avatar:
@@ -139,6 +140,7 @@ module.exports.run = async (interaction, utils) =>
           });
           newLogs.save();
     
+          // return a success message
           interaction.reply({
             content: `Successfully set the logging Channel to ${channel}`,
             ephemeral: true,
@@ -253,6 +255,7 @@ Send any message and then delete it.
 <img src="logs.png"
      alt="Logging showcase"
      style="float: left; margin-right: 10px;" />
+     
 🎉 You have successfully setup logging for you discord bot!
 You can now go ahead and add more events.
 You can read through every event [here](https://discord.js.org/#/docs/discord.js/stable/class/Client)
