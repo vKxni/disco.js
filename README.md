@@ -12,8 +12,8 @@ Discord.js Guide on how to build advanced system using Mongoose and Node.js
 * Good experience with Discord.js
 * A working connection to MongoDB with Schemas
 
-Discord.js v12 or higher.
-Nodejs v14 or higher.
+Discord.js v13.5 or higher.
+Nodejs v16 or higher.
 
 Understanding Pathing
 ```
