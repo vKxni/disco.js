@@ -20,6 +20,7 @@ module.exports.run = async (interaction) => {
   await interaction.deferReply();
   const sub = interaction.options.getSubcommand();
 
+  // Adding a sub command to accept suggestion
   if (sub === "accept") {
     const suggestionid = interaction.options.getString("id");
 
@@ -30,18 +31,21 @@ module.exports.run = async (interaction) => {
     // Get the suggestion (message)
     const suggestionmessage = suggestionQuery.suggestion;
 
+    // if no guild setup, dont execute it.
     if (!guildQuery)
       return interaction.reply({
         content: `No suggestion setup found`,
         ephemeral: true,
       });
 
+    // if suggestion id is wrong, return an error.
     if (!suggestionQuery)
       return interaction.reply({
         content: `No suggestion found with that ID.`,
         ephemeral: true,
       });
 
+    // if the channel cannot be found, return an error.
     const schannel = interaction.guild.channels.cache.get(guildQuery.channel);
     if (!schannel)
       return interaction.reply(
@@ -53,7 +57,7 @@ module.exports.run = async (interaction) => {
       .setDescription(`${suggestionmessage}\n\nThanks for this cool idea!`)
       .setColor("RED")
       .setFooter({
-        text: `Bottodir:: Suggestions`,
+        text: `Bot:: Suggestions`,
         iconURL: interaction.guild.iconURL({ dynamic: true }),
       })
       .setThumbnail(interaction.guild.iconURL({ dynamic: true }))
@@ -74,6 +78,8 @@ module.exports.run = async (interaction) => {
       content: `Suggestion successfully **accepted**!`,
       ephemeral: true,
     });
+    
+    // Adding a sub command to deny suggestion
   } else if (sub === "deny") {
     const suggestionid = interaction.options.getString("id");
 
@@ -84,18 +90,21 @@ module.exports.run = async (interaction) => {
     // Get the suggestion (message)
     const suggestionmessage = suggestionQuery.suggestion;
 
+    // the same as above
     if (!guildQuery)
       return interaction.reply({
         content: `No suggestion setup found`,
         ephemeral: true,
       });
 
+    // the same as above
     if (!suggestionQuery)
       return interaction.reply({
         content: `No suggestion found with that ID.`,
         ephemeral: true,
       });
 
+    // the same as above
     const schannel = interaction.guild.channels.cache.get(guildQuery.channel);
     if (!schannel)
       return interaction.reply(
@@ -109,7 +118,7 @@ module.exports.run = async (interaction) => {
       )
       .setColor("RED")
       .setFooter({
-        text: `Bottodir:: Suggestions`,
+        text: `Bot:: Suggestions`,
         iconURL: interaction.guild.iconURL({ dynamic: true }),
       })
       .setThumbnail(interaction.guild.iconURL({ dynamic: true }))
