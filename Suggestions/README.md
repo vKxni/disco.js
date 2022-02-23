@@ -85,8 +85,8 @@ const userSuggestions = model("user-suggestions", userSugSchema);
 
 module.exports = userSuggestions
 ```
-
 Awesome. This allows us to save data to our database.
+
 Now let's create the command to setup our suggestions.
 
 > src/commands/Suggestions/suggestion.js
@@ -163,7 +163,7 @@ module.exports.data = new SlashCommandBuilder()
 ```
 Easy, right?
 This will save all of guilds data in the database.
-Now we want to test our command and database.
+Now we want to test our command and check the database query.
 
 ```
 $ npm run deploy
@@ -172,7 +172,7 @@ $ npm run dev
 Bot is online!
 ```
 > Testing the command
-* Run `/suggestion` and choose a text channel
+* Run `/suggestion` and choose a text channel.
 Now you should see something like `Successfully set the suggestion channel to <channel>`.
 Perfect, now open MongoDB Compass and login with your connection string.
 
@@ -181,8 +181,8 @@ Perfect, now open MongoDB Compass and login with your connection string.
      style="float: left; margin-right: 10px;" />
 If you see something like this, everything worked perfectly.
 
-The next step is to create some utility, our first command will be called
-`suggest.js`
+The next step is to create some utility command, our first command will be called
+`suggest.js`.
 Create a file within your commands folder called `suggest.js`.
 The path would look like this: `src/commands/Suggestion/suggest.js`.
 
