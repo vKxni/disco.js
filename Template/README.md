@@ -18,7 +18,7 @@ Fill in your tokens and mongodb cluster connection string.
 $ npm run deploy
 To deploy commands
 
-`/ping` - ping command as a base Command
+/ping - ping command as a test Command
 ```
 
   
