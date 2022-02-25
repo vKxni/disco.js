@@ -1,22 +1,23 @@
-<p align="center">
-  <a href="https://discord.gg/3eNaWPhWZE" target="blank"><img src="https://cdn.discordapp.com/attachments/765926464628719627/924776284222025768/42b8f1ff89a307e6d969bb13726b9a45.webp" width="120" alt="Bottodir Logo" /></a>
-</p>
+# Template
+This is the empty templates used for most tutorials.
 
-<p align="center">A high quality <a href="http://discord.gg" target="_blank">Template</a> for your Discord Bot.</p>
-<p align="center">
-
-  
 ## Get Started
+
 ```
+git clone https://github.com/vKxni/disco.js/tree/main/Template
 cd Template
 npm install
-npm start
 ```
 Rename example.env to `.env`
 Fill in your tokens and mongodb cluster connection string.
 
+> Client/Guild ID
+`src/deployCommands.js` - change client and guild id.
+
 ```
-Run the following Commands in any Channel:
+$ npm run deploy
+To deploy commands
+
 `/ping` - ping command as a base Command
 ```
 
@@ -26,6 +27,3 @@ Run the following Commands in any Channel:
 * [Runtime](https://nodejs.org/en/)
 * [API](https://www.npmjs.com/package/discord.js?source=post_page-----7b5fe27cb6fa----------------------)
 * [Database](https://www.mongodb.com/) 
-
-## More
-More is coming soon, lol.
