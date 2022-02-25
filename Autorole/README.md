@@ -4,7 +4,7 @@
 </p>
 
 # Disco.js | Autorole
-This guide will explain you how to create a autorole system for your Discord.js Bot.
+This guide will explain you how to create an autorole system for your Discord.js Bot.
 
 ## Requirements
 * Basic Knowledge of JavaScript/NodeJS
